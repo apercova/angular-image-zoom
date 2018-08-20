@@ -1,0 +1,132 @@
+<div class="row">
+  <div class="column c24-17">
+      <div class="container">
+          <app-image-zoom #preview
+              [image]="image"
+              [disabled]="!enabled"
+              [zoom]="zoom"
+              [ratio]="ratio"
+              [cursor]="cursor"
+              [cursorgap]="cursorgap"
+              [type]="type"
+              [shape]="shape"
+              [mouseout]="mouseout"
+
+              (load)="zoomLoaded($event)"
+              (error)="zoomError($event)"
+              
+          >
+              <img #image style="width: 100%"
+              src="https://upload.wikimedia.org/wikipedia/commons/f/f3/GOD_-_panoramio.jpg">
+          </app-image-zoom>
+      </div>
+  </div>
+  <div class="column c24-7">
+      <div class="container row alg-center">
+          <label>Choose an image:&nbsp;</label>
+      </div>
+      <div class="container row alg-center">
+          <input #file type="file" (change)="loadImage($event)" accept="image/*" />
+      </div>
+      <br/>
+      <hr/>
+      <br/>
+      <div class="container row">
+          <div class="column c12-5 alg-right">
+            <label>Enabled?:&nbsp;</label>
+          </div>
+          <div class="column c12-6">
+            <input id="ckEnabled" type="checkbox" name="enabled" [checked]="enabled" (change)="togleEnabled($event)">
+          </div>
+      </div>
+      <div class="container row">
+          <div class="column c12-5 alg-right">
+            <label>Zoom:&nbsp;</label>
+          </div>
+          <div class="column c12-6">
+            <input type="number" name="zoom" [value]="zoom" min="1" step="0.1" (change)="changeZoom($event)">
+          </div>
+      </div>
+      <div class="container row">
+          <div class="column c12-5 alg-right">
+            <label>Ratio (px):&nbsp;</label>
+          </div>
+          <div class="column c12-6">
+            <input type="number" name="ratio" [value]="ratio" min="0" step="5" (change)="changeRatio($event)">
+          </div>
+      </div>
+      <div class="container row">
+          <div class="column c12-5 alg-right">
+            <label>Type:&nbsp;</label>
+          </div>
+          <div class="column c12-6">
+              <input type="radio" name="type" value="center" (change)="changeType($event)" 
+              [attr.checked]="type === 'center'? '': null"> Center<br/>
+              <input type="radio" name="type" value="center-adjust" (change)="changeType($event)" 
+              [attr.checked]="type === 'center-adjust'? '': null"> Center and adjust edge<br/>
+              <input type="radio" name="type" value="corner" checked (change)="changeType($event)" 
+              [attr.checked]="type === 'corner'? '': null"> Corner
+          </div>
+      </div>
+      <div class="container row">
+          <div class="column c12-5 alg-right">
+            <label>Shape:&nbsp;</label>
+          </div>
+          <div class="column c12-6">
+              <input type="radio" name="shape" value="circle" (change)="changeShape($event)" 
+                  [attr.checked]="shape === 'circle'? '': null"> Circle<br/>
+                  <input type="radio" name="shape" value="square" checked (change)="changeShape($event)"
+                  [attr.checked]="shape === 'square'? '': null"> Square
+          </div>
+      </div>
+      <div class="container row">
+          <div class="column c12-5 alg-right">
+            <label>Cursor:&nbsp;</label>
+          </div>
+          <div class="column c12-6">
+            <select name="mouseout" [value]="cursor" (change)="changeCursor($event)">
+                <option value="inherit">inherit</option>
+                <option value="default">default</option>
+                <option value="auto">auto</option>
+                <option value="none">none</option>
+                <option value="all-scroll">all-scroll</option>
+                <option value="cell">cell</option>
+                <option value="crosshair">crosshair</option>
+                <option value="grab">grab</option>
+                <option value="help">help</option>
+                <option value="move">move</option>
+                <option value="no-drop">no-drop</option>
+                <option value="not-allowed">not-allowed</option>
+                <option value="pointer">pointer</option>
+                <option value="progress">progress</option>
+                <option value="wait">wait</option>
+                <option value="zoom-in">zoom-in</option>
+                <option value="zoom-out">zoom-out</option>
+            </select> 
+          </div>
+      </div>
+      <div class="container row">
+          <div class="column c12-5 alg-right">
+            <label>Cursor Gap (px):&nbsp;</label>
+          </div>
+          <div class="column c12-6">
+              <input type="number" [value]="cursorgap" min="1" step="1" max="300"
+              [disabled]="type !== 'corner'" 
+              (change)="changeCursorgap($event)">
+          </div>
+      </div>
+      <div class="container row">
+          <div class="column c12-5 alg-right">
+            <label>Mouse out behaviour:&nbsp;</label>
+          </div>
+          <div class="column c12-6">
+              <select name="mouseout" [value]="mouseout" (change)="changeMouseout($event)">
+                  <option value="visible">Visible</option>
+                  <option value="hidden">Hidden</option>
+              </select>
+          </div>
+      </div>
+  </div>
+</div>
+
+<hr/>
