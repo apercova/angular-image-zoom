@@ -1,4 +1,4 @@
-# AngularImageZoom
+# Angular Image Zoom
 ![https://apercova.github.io/angular-image-zoom/](https://apercova.github.io/angular-image-zoom/favicon.ico)  
 ## Image aplifier component for angular2+. See a demo [here](https://apercova.github.io/angular-image-zoom/)!
 
