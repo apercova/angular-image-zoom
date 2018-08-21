@@ -15,7 +15,8 @@ export const MOUSE_OUT = {HIDDEN: 'hidden', VISIBLE: 'visible' };
   `,
   styles: [`
   .image-zoom {
-    display: block;
+    /*Adjust relative container to image size*/
+    display: table-cell;
     position: relative;
   }
 

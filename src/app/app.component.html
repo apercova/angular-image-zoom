@@ -1,25 +1,23 @@
 <div class="row">
-  <div class="column c24-17">
-      <div class="container">
-          <app-image-zoom #preview
-              [image]="image"
-              [disabled]="!enabled"
-              [zoom]="zoom"
-              [ratio]="ratio"
-              [cursor]="cursor"
-              [cursorgap]="cursorgap"
-              [type]="type"
-              [shape]="shape"
-              [mouseout]="mouseout"
+  <div class="column c24-17 alg-center">
+    <app-image-zoom #preview
+        [image]="image"
+        [disabled]="!enabled"
+        [zoom]="zoom"
+        [ratio]="ratio"
+        [cursor]="cursor"
+        [cursorgap]="cursorgap"
+        [type]="type"
+        [shape]="shape"
+        [mouseout]="mouseout"
 
-              (load)="zoomLoaded($event)"
-              (error)="zoomError($event)"
-              
-          >
-              <img #image style="width: 100%"
-              src="https://upload.wikimedia.org/wikipedia/commons/f/f3/GOD_-_panoramio.jpg">
-          </app-image-zoom>
-      </div>
+        (load)="zoomLoaded($event)"
+        (error)="zoomError($event)"
+        
+    >
+        <img #image style="max-width: 100%"
+        src="https://upload.wikimedia.org/wikipedia/commons/f/f3/GOD_-_panoramio.jpg">
+    </app-image-zoom>
   </div>
   <div class="column c24-7">
       <div class="container row alg-center">
