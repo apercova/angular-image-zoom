@@ -1,5 +1,5 @@
 # Angular Image Zoom
-![https://apercova.github.io/angular-image-zoom/](https://apercova.github.io/angular-image-zoom/favicon.ico)  
+![https://apercova.github.io/angular-image-zoom/](https://raw.githubusercontent.com/apercova/angular-image-zoom/master/src/favicon.ico)  
 ## Image amplifier component for angular2+. See a demo [here](https://apercova.github.io/angular-image-zoom/)!
 
 ## Properties
@@ -43,7 +43,7 @@
         (error)="zoomError($event)">
     >
         <img #image style="max-width: 100%"
-        src="https://upload.wikimedia.org/wikipedia/commons/f/f3/GOD_-_panoramio.jpg">
+        src="https://raw.githubusercontent.com/apercova/angular-image-zoom/master/src/favicon.ico">
     </app-image-zoom>
 ```
 > component.ts
