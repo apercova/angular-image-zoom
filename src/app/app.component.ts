@@ -22,9 +22,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.enabled = true;
     this.zoom = 2.5;
-    this.ratio = 200;
-    this.type = 'corner';
-    this.shape = 'square';
+    this.ratio = 100;
+    this.type = 'center';
+    this.shape = 'circle';
     this.cursor = 'zoom-in';
     this.cursorgap = 10 ;
     this.mouseout = 'hidden';
