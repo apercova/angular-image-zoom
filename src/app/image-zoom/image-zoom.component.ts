@@ -104,7 +104,9 @@ export class ImageZoomComponent implements OnInit {
 
   loadImage(e): void {
     this.MAX_RATIO = ((this.image.width + this.image.height) / 4);
-    this.enable();
+    if (!this.disabled) {
+      this.enable();
+    }
     this.load.emit(this.image);
   }
 
