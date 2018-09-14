@@ -6,8 +6,8 @@
 
 - `image`: Image tag reference.  
 - `disabled`: Whether disable component or not.  
-- `zoom`: Zomm level  
-- `ratio`: Zomm glass size in pixels for zoom glass shape. 
+- `zoom`: Zoom level  
+- `ratio`: Zoom glass size in pixels for zoom glass shape. 
   - Ratio size for circle shape.  
   - Base size for square shape.  
 - `cursor`: CSS cursor type.  
