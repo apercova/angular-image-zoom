@@ -12,10 +12,10 @@
   - Base size for square shape.  
 - `cursor`: CSS cursor type.  
 - `cursorgap`: Gap in pixels between cursor and zoom glass. Only for corner type.  
-- `type`: Type of zoom glass:  
-  - `corner`: Cornered cursor wrapped within image.  
-  - `center`: Centered cursor within zoom glass.  
-  - `center-adjust`: Centered cursor within zoom glass wrapped within image.
+- `type`: Type of zoom glass cursor:  
+  - `corner`: Image-border limited zoom glass with corner-positioned cursor.  
+  - `center`: Zoom glass with corner-positioned cursor.  
+  - `center-adjust`: Image-border limited zoom glass with center-positioned cursor.  
 - `shape`: Shape of zoom glass:  
   - `square`: Square shape.  
   - `circle`: Circle shape.  
